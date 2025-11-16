@@ -29,18 +29,30 @@
     #master-container{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        background-color: red;
+        grid-template-columns: repeat(3,1fr);
         padding: 20%;
-        gap:30%
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        gap:2%;
     }
+    #master-comtainer .div{
+         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+         box-shadow: red;
+    }
+
     #master-container img{
         width: 100%;
-        gap:10%
+        gap:10%;
     }
     .product{
         display: grid;
         grid-template-columns: repeat(3,1fr);
+
+    }
+    .product .div div:nth-child(2){
+        color: red;
+    }
+    #mastercontainer .button{
+        background-color: white;
+        color: red;
 
     }
     .bottom{
@@ -55,6 +67,22 @@
     }
     .bottom-container img{
         width: 10%;
+    }
+    @media(max-width:768px){
+    #master-container{
+        gap:30%
+    }
+    .product-card{
+        gap: 30%;
+    }
+    }
+    @media (max-width:320px) {
+        #master-container{
+            gap:20%
+        }
+        .product-card{
+            gap: 20%;
+        }
     }
 </style>   
     <title>Pizza Website Layout</title>
@@ -72,7 +100,7 @@
         <button>Download App</button>
     </nav>
     <div class="contain">
-        <h3>Ordre</h3>
+        <h3>Order</h3>
     <div id="master-container">
         <div>
             <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png" alt="Magretta pizza">
