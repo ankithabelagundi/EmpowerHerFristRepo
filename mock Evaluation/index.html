@@ -6,7 +6,7 @@
         box-sizing: border-box;
     }
     body{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Times New Roman', Times, serif
     }
     nav{
         display: flex;
@@ -23,22 +23,38 @@
     button{
         background-color: red;
         color:white;
-        padding:0%;
+        padding: 0% 10%;
         border:none;
     }
     #master-container{
         display: grid;
         grid-template-columns: repeat(3,1fr);
         background-color: red;
+        padding: 20%;
+        gap:30%
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     }
-    .img{
-        width: 30%;
+    #master-container img{
+        width: 100%;
+        gap:10%
     }
     .product{
         display: grid;
         grid-template-columns: repeat(3,1fr);
 
+    }
+    .bottom{
+        display:flex;
+    }
+    .bottom img{
+        width: 40%;
+    }
+    .bottom-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .bottom-container img{
+        width: 10%;
     }
 </style>   
     <title>Pizza Website Layout</title>
@@ -137,10 +153,12 @@
     </div>
     <div class="bottom">
         <img src="https://coding-platform.s3.amazonaws.com/dev/lms/tickets/48f2fc25-38f4-4d25-a878-78f15988b371/kXSpyg2iCHrCEljP.png" alt="App image">
-        <h1> Unlock Exclusive Offers</h1>
+        <div id="bottom-conatiner">
+            <h1> Unlock Exclusive Offers</h1>
         <p> For Lightning Fast Oredring Experience Download Domino's App</p>
         <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.09%20PM_558991.png" alt="Google Play">
         <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.43%20PM_652243.png" alt="Apple app store ">
+    </div>
     </div>
 </body>
 </html>
