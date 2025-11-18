@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weekly Schedule</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fef6f9, #f3f8ff);
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8em;
+      margin-bottom: 35px;
+      color: #444;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 1px;
+    }
+
+    .schedule {
+      display: grid;
+      grid-template-columns: 120px repeat(5, 1fr);
+      grid-template-rows: 60px repeat(9, 80px);
+      border: 3px solid #b8b8b8;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    }
+
+    .schedule div {
+      border: 1px solid #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1em;
+      background-color: #ffffff;
+      transition: background 0.3s ease;
+    }
+
+    .schedule div:hover {
+      background-color: #f0f8ff;
+    }
+
+    .header {
+      background-color: #ffdce5;
+      font-size: 1.2em;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .header:nth-child(3),
+    .header:nth-child(5) {
+      background-color: #fff7c2; /* Tuesday & Thursday */
+    }
+
+    .time {
+      background-color: #f3f3f3;
+      font-weight: 400;
+      font-size: 1em;
+      color: #555;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .note {
+      margin-top: 30px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.15em;
+      padding: 15px;
+      border: 2px dashed #b5b5b5;
+      background-color: #ffffffb5;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Weekly Schedule</h1>
+
+  <div class="schedule">
+    <!-- Top Row -->
+    <div class="header"></div>
+    <div class="header">Monday</div>
+    <div class="header">Tuesday</div>
+    <div class="header">Wednesday</div>
+    <div class="header">Thursday</div>
+    <div class="header">Friday</div>
+
+    <!-- Time Rows -->
+    <div class="time">08:00</div><div></div><div></div><div></div><div></div><div></div>
+    <div class="time">09:00</div><div></div><div></div><div></div><div></div><div></div>
+    <div class="time">10:00</div><div></div><div></div><div></div><div></div><div></div>
+    <div class="time">11:00</div><div></div><div></div><div></div><div></div><div></div>
+    <div class="time">12:00</div><div></div><div></div><div></div><div></div><div></div>
+    <div class="time">13:00</div><div></div><div></div><div></div><div></div><div></div>
+    <div class="time">14:00</div><div></div><div></div><div></div><div></div><div></div>
+    <div class="time">15:00</div><div></div><div></div><div></div><div></div><div></div>
+    <div class="time">16:00</div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+
+  <div class="note">
+    <strong>Note:</strong> Add any reminders or comments here.
+  </div>
+
+</body>
+</html>
