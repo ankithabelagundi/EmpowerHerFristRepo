@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+             border: 3px solid black; 
+             padding: 5px;
+            background-color: lightsalmon;
+        }
+        nav a{
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            padding: 8px;
+        }
+        nav a:hover{
+            text-decoration: underline;
+
+        }
+        button{
+            background-color: lightseagreen;
+            color: beige;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover{
+            background-color: palevioletred;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="background-color: lightgrey; color:darkblue; font-size: 40px;">Welcome To My Webpage</h1>
+        <h2 style="color: green; font-size: 28px;"><b>Learning Web development</b></h2>
+    </header>
+    <img src="https://tse1.mm.bing.net/th/id/OIP.2HIX184r17IvA1VRuXdtbAHaFL?pid=Api&P=0&h=180" alt="Wallpaper image"
+    style="width: 300px; float: right; border-radius: 50%; box-shadow: 0px 0px 15px greenyellow;">
+    <nav>
+        <a href="#">Home</a><br>
+        <a href="#">About</a><br>
+        <a href="#">Contact</a><br>
+    </nav>
+    <table style="border-collapse: collapse; border:2px solid black; width: 40%;">
+        <tr>
+            <th style="color: teal; border: 1px solid black; padding: 10px;text-align: center;">Sample Data</th>
+            <th style="color: aqua; border: 1px solid black; padding: 10px;text-align: center;">Services</th>
+        </tr>
+        <tr>
+            <td style="color: maroon; border: 1px solid black; padding: 10px;text-align: center;">HTML basics</td>
+            <td style="color: tomato; border: 1px solid black; padding: 10px;text-align: center;">Completed</td>
+        </tr>
+        <tr>
+            <td style="color: purple; border: 1px solid black; padding: 10px;text-align: center;">CSS styling</td>
+            <td style="color: plum; border: 1px solid black; padding: 10px;text-align: center;">In progress</td>
+        </tr>
+    </table>
+<button class="button">Click Me</button>
+<p style="text-align: justify; color: black; border: 2px solid skyblue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates alias perspiciatis quae odit mollitia fuga nobis amet saepe eius, odio dolorum corporis. Tenetur quam unde suscipit laborum quas dignissimos blanditiis!</p>
+<form >
+    <label for="name">Name</label>
+    <input type="text" id="Name" name="Name" placeholder="Enter Your Name" required>
+    <label for="email">Email</label>
+    <input type="text" id="Email" email="Email" placeholder="Enter your Email"required>
+    <button class="submit">Submit</button>
+</form>
+<footer style="text-align: center; background-color: darkgrey;font-size: smaller;"> © 2025 Ankitha.Allrights Reserved</footer>
+</body>
+</html>

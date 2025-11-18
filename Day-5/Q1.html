@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layout</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(3, 60px);
+      gap: 5px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+    .grid div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Colors for each cell */
+    .red { background: red; }
+    .blue { background: blue; }
+    .yellow { background: yellow; color: black; }
+    .purple { background: purple; }
+    .green { background: green; }
+    .cyan { background: cyan; color: black; }
+    .orange { background: orange; color: black; }
+    .teal { background: teal; }
+    .maroon { background: maroon; }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="red">2.</div>
+    <div class="blue">3.</div>
+    <div class="yellow">4.</div>
+    <div class="purple">5.</div>
+    <div class="green">6.</div>
+    <div class="cyan">1.</div>
+    <div class="orange">7.</div>
+    <div class="teal">8.</div>
+    <div class="maroon">9.</div>
+  </div>
+</body>
+</html>
