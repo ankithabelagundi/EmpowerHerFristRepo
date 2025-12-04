@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    input, select, button {
+      margin: 5px;
+      padding: 8px;
+      font-size: 14px;
+    }
+    #booksContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .book-card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .book-card img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .book-card h3 {
+      margin: 5px 0;
+    }
+    .book-card p {
+      margin: 3px 0;
+      color: #555;
+    }
+    .book-card button {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .book-card button:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Book Management Page</h1>
+  <button onclick="window.location.href='index.html'">Go to Home Page</button>
+
+  <!-- Add Book Form -->
+  <form id="bookForm">
+    <input type="text" id="title" placeholder="Book Title" required>
+    <input type="text" id="author" placeholder="Author Name" required>
+    <select id="category" required>
+      <option value="">Select Category</option>
+      <option value="Fiction">Fiction</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Technical">Technical</option>
+    </select>
+    <button type="submit">Add Book</button>
+  </form>
+
+  <!-- Sort Buttons -->
+  <button onclick="sortBooks('asc')">Sort by Title A → Z</button>
+  <button onclick="sortBooks('desc')">Sort by Title Z → A</button>
+
+  <!-- Filter Dropdown -->
+  <select id="filterCategory" onchange="filterBooks()">
+    <option value="All">All</option>
+    <option value="Fiction">Fiction</option>
+    <option value="Comedy">Comedy</option>
+    <option value="Technical">Technical</option>
+  </select>
+
+  <!-- Books Display Section -->
+  <div id="booksContainer"></div>
+
+  <script>
+    const books = [];
+    const imageUrl = "https://m.media-amazon.com/images/I/71ZB18P3inL._SY522_.jpg";
+
+    const bookForm = document.getElementById('bookForm');
+    const booksContainer = document.getElementById('booksContainer');
+    const filterCategory = document.getElementById('filterCategory');
+
+    // Add Book
+    bookForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const title = document.getElementById('title').value;
+      const author = document.getElementById('author').value;
+      const category = document.getElementById('category').value;
+
+      const book = { title, author, category, imageUrl };
+      books.push(book);
+      renderBooks(books);
+
+      bookForm.reset();
+    });
+
+    // Render Books
+    function renderBooks(bookArray) {
+      booksContainer.innerHTML = '';
+      bookArray.forEach((book, index) => {
+        const card = document.createElement('div');
+        card.className = 'book-card';
+        card.innerHTML = `
+          <img src="${book.imageUrl}" alt="Book Image">
+          <h3>${book.title}</h3>
+          <p>Author: ${book.author}</p>
+          <p>Category: ${book.category}</p>
+          <button onclick="deleteBook(${index})">Delete</button>
+        `;
+        booksContainer.appendChild(card);
+      });
+    }
+
+    // Delete Book
+    function deleteBook(index) {
+      books.splice(index, 1);
+      renderBooks(books);
+    }
+
+    // Sort Books
+    function sortBooks(order) {
+      books.sort((a, b) => {
+        if (order === 'asc') {
+          return a.title.localeCompare(b.title);
+        } else {
+          return b.title.localeCompare(a.title);
+        }
+      });
+      renderBooks(books);
+    }
+
+    // Filter Books
+    function filterBooks() {
+      const category = filterCategory.value;
+      if (category === 'All') {
+        renderBooks(books);
+      } else {
+        const filtered = books.filter(book => book.category === category);
+        renderBooks(filtered);
+      }
+    }
+  </script>
+</body>
+</html>
