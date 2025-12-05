@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 color="Purple">
+        Login Page
+    </h2>
+    <input id="username" placeholder="Enter The Name">
+    <br><br>
+    <button onclick="loginUser()">Login</button>
+    <script>
+        function loginUser(){
+            const u=document.getElementById("username").values;
+            if(u===""){
+                alert("please enter user ");
+            }
+            else{
+                window.location.assign("Dashboard.html")
+            }
+        }
+    </script>
+</body>
+</html>

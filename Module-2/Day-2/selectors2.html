@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Selector Challenge</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Cambria, Cochin, Georgia,  serif;
+            margin:0;
+            padding:0;
+        }
+        #header{
+            background: #f4ebe8;
+            padding:20px 40px;
+            border-bottom: 2px solid #d3cab3;
+        }
+        .main-heading{
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .sub-heading{
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .sub-heading{
+            font-size: 1.5em;
+            margin-bottom: 12px;
+        }
+        .text-highlight{
+            font-weight: bold;
+            color: #223b49;
+        }
+        section,footer{
+            padding: 40px;
+            margin-top: 10px;
+            border-radius: 6px;
+        }
+        .box-light{
+            background: #f4ebe8;
+            border-bottom: 2px solid #d3cab3;
+            margin-bottom: 10px;
+        }
+        .box-dark{
+            background: #223b49;
+            color: #fff;
+        }
+        .emphasis{
+            font-weight:bold;
+            color: #6b8b9c;
+        }
+        span:hover{
+            background:#cbe6ee;
+        }
+        @media(max-width:600px){
+            .main-heading{ font-size: 1.5em; }
+            .sub-heading{ font-size: 1em; }
+            section,footer{  padding:15px; }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="sub-heading">EVERYONE NEEDS INFINITE DREAMS</div>
+        <hr>
+        <div class="main-heading">
+            <span class="text-highlight">Enid</span>
+            is an <span class="emphasis">amplification studio</span>
+            that builds brands that <span class="emphasis">resound</span>.
+        </div>
+    </header>
+    <section class="box-dark">
+        <div class="sub-heading">EACH NEW IDEA DEFINED</div>
+        <hr>
+        <div class="main-heading">
+            We stand frim on <span class="emphasis">our values</span> that sit central to
+            <span> everthing we do</span>.
+        </div>
+    </section>
+    <footer class="box-light">
+        <div class="sub-heading">EVERY NOTE IS DISTINCT</div>
+        <hr>
+        <div class="main-heading">
+            we <span class="emphasis">deep-dive</span> into your back catalogue to understand the <span class="emphasis">beat</span>. 
+        </div>
+    </footer>
+</body>
+</html>

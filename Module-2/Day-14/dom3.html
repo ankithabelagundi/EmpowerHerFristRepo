@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box" style="width: 100px;height: 100px;background: blue";></div>
+    <button onclick="hidebox()">Hide</button>
+    <button onclick="showbox()">Show</button>
+</body>
+<script>
+    function hidebox(){
+        document.getElementById("box").style.display="none";
+    }
+    function showbox(){
+        document.getElementById("box").style.display="block";
+    }
+</script>
+</html>

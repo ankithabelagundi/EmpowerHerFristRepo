@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+          <h1 id="title">DOM Manipulation</h1> 
+          <p class="Para">Frist Para</p>
+          <p class="Para">Second Para</p>
+          <p class="Para">Third Para </p>    
+        </div> 
+        <button onclick="btn">Click Me</button>
+</body>
+<script>
+const btn=document.querySelector("btn");
+btn.addEventListener("click",() =>{
+heading.innerText="Hello World";
+})
+const heading=document.getElementById("title");
+    heading.style.background="lightblue";
+    console.log(heading.innerText);
+    const para=document.querySelector("p");
+    console.dir("para")
+    const paras=document.querySelectorAll(".Para");
+    console.dir("paras")
+    paras.forEach(i=>console.log[i]);
+</script>
+</html>
